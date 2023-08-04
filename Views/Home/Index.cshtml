@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Here are some delicious foods!</h1>
+    @{
+        List<string> FoodList = new List<string>();
+            FoodList.Add("Apple Pie");
+            FoodList.Add("Pizza");
+            FoodList.Add("Cinnamon Rolls");
+            FoodList.Add("Lasagna");
+            FoodList.Add("Donuts");
+            FoodList.Add("Chocolate Cake");
+            FoodList.Add("Burritos");
+        
+        foreach (string food in FoodList)
+        {
+            if (food[0] == 'C')
+            {
+                <p style="color:red">@food</p>
+            }
+            else
+            {
+                <p>@food</p>
+            }
+        }
+    }
+</div>
